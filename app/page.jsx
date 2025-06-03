@@ -2,7 +2,7 @@
 
 import { GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 import { useRouter } from "next/navigation";
-import { auth } from '../lib/firebase'; // ✅ Correct
+import { auth } from "../lib/firebase";
 import useUserStore from "../store/useUserStore";
 
 export default function Home() {
