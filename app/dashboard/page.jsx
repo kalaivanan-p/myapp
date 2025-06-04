@@ -3,6 +3,7 @@
 import LogoutButton from "../../components/home/LogoutButton";
 import useUserStore from "../../store/useUserStore";
 
+
 export default function Dashboard() {
   const user = useUserStore((state) => state.user);
 
@@ -12,7 +13,7 @@ export default function Dashboard() {
     <div>
       <h1>Welcome, {user.displayName}!</h1>
       <p>Your email: {user.email}</p>
-      <LogoutButton />
+      <LogoutButton /> 
     </div>
   );
 }
