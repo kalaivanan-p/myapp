@@ -1,4 +1,4 @@
-// components/SignInGoogle.jsx
+
 'use client';
 
 import { auth, googleProvider } from '@/lib/firebase';

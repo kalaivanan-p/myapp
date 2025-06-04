@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { onAuthStateChanged, getAuth } from "firebase/auth";
 import useUserStore from "../../store/useUserStore";
 
-const auth = getAuth();  // initialize auth here or import if already initialized elsewhere
+const auth = getAuth();  
 
 export default function AuthListener() {
   const setUser = useUserStore((state) => state.setUser);
@@ -21,6 +21,8 @@ export default function AuthListener() {
       } else {
         clearUser();
       }
+
+      
     });
 
     return () => unsubscribe();
