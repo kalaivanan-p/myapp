@@ -1,9 +1,8 @@
-// /store/hoc/withAuth.js
 "use client";
 
 import React, { useEffect } from "react";
 import { useRouter } from "next/navigation";
-import useUserStore from "../useUserStore";
+import useUserStore from "../store/useUserStore";
 
 const withAuth = (WrappedComponent) => {
   const AuthenticatedComponent = (props) => {
@@ -11,13 +10,13 @@ const withAuth = (WrappedComponent) => {
     const user = useUserStore((state) => state.user);
 
     useEffect(() => {
-      if (!user) {
-        router.push("/"); 
+      if (user === null) {
+        router.push("/"); // redirect if no user
       }
     }, [user, router]);
 
     if (!user) {
-      return null; 
+      return null; // or loading spinner here
     }
 
     return <WrappedComponent {...props} />;
@@ -26,4 +25,4 @@ const withAuth = (WrappedComponent) => {
   return AuthenticatedComponent;
 };
 
-export default withAuth;
+export default withAuth;
