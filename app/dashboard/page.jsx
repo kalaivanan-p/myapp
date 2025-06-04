@@ -2,6 +2,8 @@
 
 import LogoutButton from "../../components/home/LogoutButton";
 import useUserStore from "../../store/useUserStore";
+import withAuth from "../store/hoc/withAuth";
+
 
 export default function Dashboard() {
   const user = useUserStore((state) => state.user);
