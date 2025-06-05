@@ -2,7 +2,8 @@
 
 this is alogin page using **next.js**,**firebase** and **zustand**
 
-![loginpage screenshot](login-page.png)
+![loginpage screenshot](login.png)
+
 
 ## steps to start the project
 
